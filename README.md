@@ -1,91 +1,55 @@
-# azal
+# azal GRUB Theme
 
-A custom, poetic, and refined GRUB bootloader theme. 
+A clean, custom red-and-black GRUB bootloader theme.
 
-Based on the [themeGrub.CyberEXS](https://github.com/HenriqueLopes42/themeGrub.CyberEXS) theme by [Henrique Lopes](https://github.com/HenriqueLopes42).
+This is a fork of [themeGrub.CyberEXS](https://github.com/HenriqueLopes42/themeGrub.CyberEXS) by [Henrique Lopes](https://github.com/HenriqueLopes42), modified to fit my personal setup.
 
----
+## Features
+- **Custom Background**: 1920x1080 wallpaper featuring the word "azal" written in English, Punjabi (Gurmukhi), and Shahmukhi.
+- **Red Accents**: Selection boxes and text highlights are changed to a deep red to match the background.
+- **Fonts**: Uses Terminus for the terminal output and Ubuntu Regular for the boot menu.
+- **Icons**: Includes over 80 icons covering most Linux distros, Windows, and utilities.
 
-## 🌟 Features
-* **Custom Branded Visuals**: Features a stunning, custom cyberpunk artwork background (1920x1080) featuring the **"azal 永遠"** digital branding.
-* **Crimson Red Theme**: Designed with custom red selection borders and matching crimson red text indicators to align with the wallpaper.
-* **Custom Typography**: Features high-legibility Terminus fonts for terminal views and Ubuntu Regular for boot options.
-* **Rich Icon Set**: Includes an extensive directory of 80+ clean, modern icons for various Linux distributions, Windows, macOS, and utilities.
+## Installation
 
----
-
-## 🛠️ Installation & Configuration
-
-### Option 1: Automated Installation (Recommended)
-
-Clone the repository and run the interactive installer script. The script automatically handles copying the files, backing up your GRUB configuration, and setting all parameters (GFXMODE, GFXPAYLOAD, OS Prober / Windows detection, default OS memory):
+### Automated script (Recommended)
+You can use the provided script to automatically install the theme, back up your current GRUB config, and apply the correct settings (like setting the resolution to 1080p and enabling os-prober for dual boot).
 
 ```bash
-git clone https://github.com/HenriqueLopes42/themeGrub.CyberEXS.git azal-grub-theme
+git clone https://github.com/VardanRattan/azal-grub-theme.git
 cd azal-grub-theme
 sudo ./install.sh
 ```
 
-Follow the menu prompts to:
-1. **Install/Update** the `azal` theme.
-2. **Uninstall** the theme and safely revert configurations.
+### Manual setup
+If you'd rather do it yourself:
 
----
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/VardanRattan/azal-grub-theme.git
+   cd azal-grub-theme
+   ```
 
-### Option 2: Manual Installation & Configuration
+2. Copy the theme files:
+   ```bash
+   sudo mkdir -p /boot/grub/themes/azal
+   sudo cp -r *.png *.pf2 *.txt icons/ /boot/grub/themes/azal/
+   ```
 
-If you prefer manual configuration step-by-step:
+3. Update `/etc/default/grub` with these settings:
+   ```bash
+   GRUB_THEME="/boot/grub/themes/azal/theme.txt"
+   GRUB_GFXMODE="1920x1080,auto"
+   GRUB_GFXPAYLOAD_LINUX="keep"
+   GRUB_DISABLE_OS_PROBER="false"
+   GRUB_DEFAULT="saved"
+   GRUB_SAVEDEFAULT="true"
+   ```
 
-#### 1. Clone the theme
-```bash
-git clone https://github.com/HenriqueLopes42/themeGrub.CyberEXS.git azal-grub-theme
-cd azal-grub-theme
-```
+4. Regenerate your GRUB config:
+   ```bash
+   sudo grub-mkconfig -o /boot/grub/grub.cfg
+   ```
 
-#### 2. Create the themes directory and copy files
-```bash
-sudo mkdir -p /boot/grub/themes/azal
-sudo cp -r * /boot/grub/themes/azal/
-```
-
-#### 3. Enable the Theme
-Set the theme path in `/etc/default/grub`:
-```bash
-echo 'GRUB_THEME="/boot/grub/themes/azal/theme.txt"' | sudo tee -a /etc/default/grub
-```
-
-#### 4. Enable Windows & Dual Boot Detection
-Allow GRUB to probe for other operating systems (like Windows):
-```bash
-echo 'GRUB_DISABLE_OS_PROBER=false' | sudo tee -a /etc/default/grub
-```
-*Note: Make sure `os-prober` is installed. On Arch/EndeavourOS:*
-```bash
-sudo pacman -S os-prober
-```
-
-#### 5. Remember the Last Selected/Booted OS
-```bash
-echo 'GRUB_DEFAULT=saved' | sudo tee -a /etc/default/grub
-echo 'GRUB_SAVEDEFAULT=true' | sudo tee -a /etc/default/grub
-```
-
-#### 6. Configure Resolution and GFX Payload
-Set the resolution to match the wallpaper (1920x1080) and preserve resolution for the kernel:
-```bash
-sudo sed -i 's/^GRUB_GFXMODE=.*/GRUB_GFXMODE="1920x1080,auto"/' /etc/default/grub
-echo 'GRUB_GFXPAYLOAD_LINUX=keep' | sudo tee -a /etc/default/grub
-```
-
-#### 7. Regenerate GRUB Config
-Apply the configuration changes:
-```bash
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
----
-
-## 📜 Credits & License
-* This theme is a fork and customization of the original [themeGrub.CyberEXS](https://github.com/HenriqueLopes42/themeGrub.CyberEXS) theme.
-* All credit for the base layout, box graphics, and style goes to the original author, **Henrique Lopes**.
-* Original repository: [HenriqueLopes42/themeGrub.CyberEXS](https://github.com/HenriqueLopes42/themeGrub.CyberEXS)
+## Credits
+- Based heavily on [themeGrub.CyberEXS](https://github.com/HenriqueLopes42/themeGrub.CyberEXS) by Henrique Lopes.
