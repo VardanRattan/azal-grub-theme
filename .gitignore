@@ -1,0 +1,4 @@
+*.jpg
+*.log
+*.bak
+.DS_Store
