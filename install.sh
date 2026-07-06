@@ -122,7 +122,7 @@ install_theme() {
     
     # Copy files
     mkdir -p "$THEME_DIR"
-    cp -r "${SCRIPT_DIR}"/*.png \
+    cp -a "${SCRIPT_DIR}"/*.png \
           "${SCRIPT_DIR}"/*.pf2 \
           "${SCRIPT_DIR}"/*.txt \
           "${SCRIPT_DIR}/icons" \
