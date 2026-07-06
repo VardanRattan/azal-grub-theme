@@ -1,14 +1,12 @@
-# azal GRUB Theme
+# azal GRUB theme
 
-A clean, custom red-and-black GRUB bootloader theme.
+A clean, dark, ink-wash inspired theme for GRUB. I built this because I wanted a boot screen that feels calm and stays out of the way. 
 
-This is a fork of [themeGrub.CyberEXS](https://github.com/HenriqueLopes42/themeGrub.CyberEXS) by [Henrique Lopes](https://github.com/HenriqueLopes42), modified to fit my personal setup.
-
-## Features
-- **Custom Background**: 1920x1080 wallpaper featuring the word "azal" written in English, Punjabi (Gurmukhi), and Shahmukhi.
-- **Red Accents**: Selection boxes and text highlights are changed to a deep red to match the background.
-- **Fonts**: Uses Terminus for the terminal output and Ubuntu Regular for the boot menu.
-- **Icons**: Includes over 80 icons covering most Linux distros, Windows, and utilities.
+## What's included
+- **Dark, matte background**: A custom 1080p wallpaper that isn't blinding at night.
+- **Soft accents**: Highlights use a muted indigo with aged-paper text. No harsh pure whites or neon colors.
+- **Good fonts**: Uses Terminus for the terminal and Ubuntu Regular for the boot menu. It just works.
+- **Lots of icons**: Over 80 icons covering pretty much any distro (and Windows).
 
 ## Installation
 
@@ -52,4 +50,6 @@ If you'd rather do it yourself:
    ```
 
 ## Credits
-- Based heavily on [themeGrub.CyberEXS](https://github.com/HenriqueLopes42/themeGrub.CyberEXS) by Henrique Lopes.
+
+This theme is a fork and heavy modification of [themeGrub.CyberEXS](https://github.com/HenriqueLopes42/themeGrub.CyberEXS) by Henrique Lopes. I retained the structure and the extensive icon pack from the original project while entirely overhauling the visual design, colors, and background to fit my personal setup.
+

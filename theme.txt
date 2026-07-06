@@ -5,7 +5,7 @@
 # Main options
 title-text: ""
 desktop-image: "background.png"
-desktop-color: "#000000"
+desktop-color: "#1F1F28"
 terminal-font: "Terminus Regular 14"
 terminal-box: "terminal_box_*.png"
 terminal-left: "10%"
@@ -21,8 +21,8 @@ terminal-border: "0"
   width = 28%
   height = 36%
   item_font = "Ubuntu Regular 17"
-  item_color = "#8a8a8a"
-  selected_item_color = "#ff4d4d"
+  item_color = "#DCD7BA"
+  selected_item_color = "#7E9CD8"
   icon_width = 64
   icon_height = 64
   item_icon_space = 20
