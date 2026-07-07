@@ -16,19 +16,19 @@ terminal-border: "0"
 
 # Boot menu
 + boot_menu {
-  left = 36%
-  top = 58%
-  width = 28%
-  height = 36%
-  item_font = "Ubuntu Regular 17"
+  left = 10%
+  top = 45%
+  width = 45%
+  height = 45%
+  item_font = "Noto Sans Bold 22"
   item_color = "#DCD7BA"
-  selected_item_color = "#7E9CD8"
+  selected_item_color = "#98BB6C"
   icon_width = 64
   icon_height = 64
   item_icon_space = 20
-  item_height = 70
-  item_padding = 2
-  item_spacing = 10
+  item_height = 76
+  item_padding = 4
+  item_spacing = 18
   selected_item_pixmap_style = "select_*.png"
 }
 

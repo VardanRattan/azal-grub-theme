@@ -114,14 +114,15 @@ This is just a quick rundown of the design choices for the theme. I wanted somet
 I'm keeping it simple and sticking to a matte, dark palette:
 
 - **Sumi-Black (#1F1F28)**: The main background. Think dry ink on paper. 
-- **Indigo (#7E9CD8)**: Primary accent. Used for highlighted items and active states. 
-- **Sage (#98BB6C)**: Secondary accent. Mostly for success states.
+- **Indigo (#7E9CD8)**: Primary accent. Used for text selection and highlights. 
+- **Sage (#98BB6C)**: Secondary accent. Used for the soft glowing, ink-bleed selection highlight capsule.
 - **Vermillion (#C34043)**: Just for errors or anything that really needs attention.
 - **Aged-Paper (#DCD7BA)**: Text and icons. Pure white hurts to look at in the dark, so this off-white is much better.
 
 ## Typography
 
-- **Rubik**: Used everywhere for normal text. The slightly rounded edges fit the whole "ink" vibe well.
+- **Noto Sans**: Used for the boot menu entries (at size 22, Bold) for a crisp, legible, and premium modern look.
+- **Rubik**: General styling reference font.
 - **JetBrains Mono**: For the terminal and any code/technical output.
 
 ## Layout & Spacing
